@@ -30,7 +30,6 @@ padding: 0;
 body {
   font-family: "Roboto", sans-serif;
   color: var(--default-text);
-  background-color: var(--main-background);
 }
 h1, h2, h3 {
   font-family: "Merriweather", sans-serif;
@@ -38,7 +37,7 @@ h1, h2, h3 {
 h1 {
   font-size: 2rem;
 }
-p {
+p, a, label, ::placeholder {
   font-size: 12px;
   font-weight: 300;
 }
@@ -53,38 +52,35 @@ img, picture, video, canvas, svg {
 
 :root {
   --default-text: #0C0C0C;
-  --main-background: #F3F6F9;
-  --service-tile: #7A7A7A;
+  --projects-background: #F3F6F9;
+  --services-text: #7A7A7A;
   --large-words: #F2F0FF;
   --purple: #5722CD;
   --blue: #4845E4;
   --pink: #ED4385;
 }
 
-.outer-container {
-  display: flex;
-  justify-content: center;
-}
 .inner-container {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
   align-items: center;
-  margin: 2rem 3rem;
+  margin: auto;
+  padding: 2rem;
   gap: 2rem;
 }
-.image-wrapper {
-  flex-basis: 800px;
-  flex-grow: 0;
-  flex-shrink: 1;
-}
+/*.image-wrapper {*/
+/*  flex-basis: 800px;*/
+/*  flex-grow: 0;*/
+/*  flex-shrink: 1;*/
+/*}*/
 
 /* --------------- 3.2 Other --------------------------- */
 
 button {
   background-color: var(--pink);
   color: white;
-  padding: 20px;
+  padding: 20px 30px;
   border: none;
   border-radius: 30px;
   box-shadow: 0 6px 10px rgb(0, 0, 0, 0.2);
@@ -113,54 +109,104 @@ ul {
 header {
   background-color: var(--purple);
   color: white;
+}
+.header {
   text-align: center;
+  max-width: 700px;
 }
-header p {
-  font-size: 1.5rem;
+
+.header p {
+  font-size: 1.3rem;
 }
-header img {
+.header img {
   position: relative;
   top: 2rem;
   margin-top: 4rem;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
-main {
-  max-width: 1200px;
-  margin: auto;
-}
 .introduction {
-  text-align: center;
-  padding: 2rem;
+  max-width: 700px;
 }
 .introduction h2 {
   color: var(--purple);
+  text-align: center;
 }
-.introduction p {
+.inner-container p {
 }
 
 /* --------------- 4.3 Projects ------------------- */
-
+.projects {
+  background-color: var(--projects-background);
+}
 
 .projects article {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
   align-items: center;
 }
-.projects div {
-  flex-basis: 300px;
-  gap: 1rem;
-  border: 1px solid var(--purple);
+.projects article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.projects article div {
+  display: flex;
+  flex: 0 0 300px;
+  flex-direction: column;
+  min-height: 200px;
+  justify-content: space-between;
+}
+.projects article div img {
+  width: 50px;
 }
 .projects span {
-  flex-basis: 800px;
+  flex-basis: 600px;
   box-shadow: 0 10px 20px rgb(0, 0, 0, 0.3);
 }
 
 /* --------------- 4.4 Services ------------------- */
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services article {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  height: 250px;
+  padding: 2rem;
+  border: 1px solid var(--purple);
+  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+}
+.services img {
+  width: 50px;
+}
+.services h3 {
+  margin-block: 0.5rem;
+  color: var(--purple);
+}
+.services p {
+  color: var(--services-text);
+}
 
 /* --------------- 4.5 Contact ------------------- */
+.contact {
+  background-color: var(--purple);
+  color: white;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
 
 /* --------------- 4.6 Footer ------------------- */
-
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  background-color: #0C0C0C;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
