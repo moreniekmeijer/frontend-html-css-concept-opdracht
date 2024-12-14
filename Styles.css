@@ -19,285 +19,340 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* ------------------------------- 2. Type Styles ----------------------------------- */
 body {
-  font-family: "Roboto", sans-serif;
-  color: var(--default-text);
+    font-family: "Roboto", sans-serif;
+    color: var(--default-text);
 }
+
 h1, h2, h3 {
-  font-family: "Merriweather", sans-serif;
+    font-family: "Merriweather", sans-serif;
 }
+
 h1 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
+
 p, a {
-  font-size: 12px;
-  font-weight: 300;
+    font-size: 12px;
+    font-weight: 300;
 }
+
 img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
 :root {
-  --default-text: #0C0C0C;
-  --projects-background: #F3F6F9;
-  --services-text: #7A7A7A;
-  --large-words: #F2F0FF;
-  --purple: #5722CD;
-  --blue: #4845E4;
-  --pink: #ED4385;
+    --default-text: #0C0C0C;
+    --projects-background: #F3F6F9;
+    --services-text: #7A7A7A;
+    --large-words: #F2F0FF;
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
 }
 
 .inner-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  align-items: center;
-  margin: auto;
-  padding-block: 6rem;
-  padding-inline: 2rem;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    align-items: center;
+    margin: auto;
+    padding-block: 6rem;
+    padding-inline: 2rem;
+    gap: 2rem;
 }
 
 /* --------------- 3.2 Other --------------------------- */
 button {
-  background-color: var(--pink);
-  color: white;
-  padding: 20px 30px;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  cursor: pointer;
+    background-color: var(--pink);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 10px rgb(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    cursor: pointer;
 }
+
 a {
-  text-decoration: none;
-  color: var(--purple);
+    text-decoration: none;
+    color: var(--purple);
 }
+
 .projects :is(a, a:link, a:visited) {
-  position: relative;
-  text-transform: uppercase;
+    position: relative;
+    text-transform: uppercase;
 }
+
 .projects a::after {
-  position: absolute;
-  top: 0.3rem;
-  left: 6rem;
-  content: "";
-  alignment-baseline: center;
-  width: 0.6rem;
-  height: 1px;
-  background-color: var(--purple);
-  transition: width .30s ease-in-out;
+    position: absolute;
+    top: 0.3rem;
+    left: 6rem;
+    content: "";
+    width: 0.6rem;
+    height: 1px;
+    background-color: var(--purple);
+    transition: width .30s ease-in-out;
 }
+
 .projects a:hover::after {
-  width: 2rem;
+    width: 2rem;
 }
+
 .background-text {
-  position: absolute;
-  margin-top: -6rem;
-  color: var(--purple);
-  opacity: 0.04;
-  font-family: inherit;
-  font-weight: 900;
-  font-size: 22rem;
-  z-index: -1;
+    position: absolute;
+    margin-top: -6rem;
+    color: var(--purple);
+    opacity: 0.04;
+    font-weight: 900;
+    font-size: 22rem;
+    z-index: -1;
 }
+
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 nav {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 ul {
-  display: flex;
-  gap: 2rem;
-  padding: 1.5rem 4rem;
-  justify-content: flex-end;
-  flex-basis: 100%;
-  list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 4rem;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    list-style: none;
 }
+
 li a {
-  color: white;
-  font-size: 1rem;
+    color: white;
+    font-size: 1rem;
 }
+
 header {
-  background: rgb(87,34,205);
-  background: linear-gradient(270deg, rgba(87,34,205,1) 0%, rgba(72,69,228,1) 100%);
-  color: white;
+    background: rgb(87, 34, 205);
+    background: linear-gradient(270deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 100%);
+    color: white;
 }
+
 .header {
-  text-align: center;
-  max-width: 700px;
-  padding: 4rem 4rem 0;
+    text-align: center;
+    max-width: 700px;
+    padding: 4rem 4rem 0;
 }
+
 .header p {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
+
 .header img {
-  position: relative;
-  top: 4rem;
+    position: relative;
+    top: 4rem;
 }
+
 .triangle-header {
-  width: 0;
-  height: 0;
-  border-right: 100vw solid transparent;
-  border-bottom: 50px solid white;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 50px solid white;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
 .introduction {
-  max-width: 700px;
-  margin-top: -2rem;
+    max-width: 700px;
+    margin-top: -2rem;
 }
+
 .introduction h2 {
-  color: var(--purple);
-  text-align: center;
+    color: var(--purple);
+    text-align: center;
 }
+
 .introduction p {
-  margin-top: 2rem;
-  text-align: center;
+    margin-top: 2rem;
+    text-align: center;
 }
+
 .triangle-introduction {
-  width: 0;
-  height: 0;
-  border-right: 100vw solid white;
-  border-bottom: 50px solid var(--projects-background);
+    width: 0;
+    height: 0;
+    border-right: 100vw solid white;
+    border-bottom: 50px solid var(--projects-background);
 }
 
 /* --------------- 4.3 Projects ------------------- */
 .projects {
-  background-color: var(--projects-background);
+    background-color: var(--projects-background);
 }
 
 .projects article {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 4rem;
-  z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+    z-index: 2;
 }
+
 .projects article:nth-child(even) {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
+
 .projects article div {
-  display: flex;
-  flex: 0 0 300px;
-  flex-direction: column;
-  min-height: 200px;
-  justify-content: space-between;
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-between;
 }
+
 .projects article div img {
-  width: 50px;
+    width: 50px;
+    margin-top: -2rem;
 }
+
 .projects span {
-  flex-basis: 600px;
-  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.3);
+    flex-basis: 600px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.3);
 }
+
 .projects .background-text {
-  color: white;
-  opacity: 0.5;
-  margin-top: -10rem;
-  z-index: 1;
+    color: white;
+    opacity: 0.5;
+    z-index: 1;
 }
+
 .triangle-projects {
-  width: 0;
-  height: 0;
-  border-right: 100vw solid var(--projects-background);
-  border-bottom: 30px solid transparent;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid var(--projects-background);
+    border-bottom: 30px solid transparent;
 }
 
 /* --------------- 4.4 Services ------------------- */
 .services {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+    position: relative;
 }
+
 .services article {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 300px;
-  height: 250px;
-  padding: 2rem;
-  border: 1px solid var(--purple);
-  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    height: 250px;
+    padding: 2rem;
+    border: 1px solid var(--purple);
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
+    background-color: white;
 }
+
 .services img {
-  width: 50px;
+    width: 50px;
 }
+
 .services h3 {
-  margin-block: 0.5rem;
-  color: var(--purple);
+    margin-block: 0.5rem;
+    color: var(--purple);
 }
+
 .services p {
-  color: var(--services-text);
+    color: var(--services-text);
 }
+
 .services .background-text {
-  font-size: 14rem;
-  margin-top: -40rem;
+    font-size: 14rem;
+    top: 1rem;
 }
 
 /* --------------- 4.5 Contact ------------------- */
 .contact {
-  background: rgb(87,34,205);
-  background: linear-gradient(270deg, rgba(87,34,205,1) 0%, rgba(72,69,228,1) 100%);
-  color: white;
+    background: rgb(87, 34, 205);
+    background: linear-gradient(270deg, rgba(87, 34, 205, 1) 0%, rgba(72, 69, 228, 1) 100%);
+    color: white;
 }
+
 .contact form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 700px;
-  height: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
 }
+
 .contact button {
-  width: 120px;
-  align-self: center;
+    width: 120px;
+    align-self: center;
 }
+
 .contact input, textarea {
-  padding: 15px;
-  font-family: inherit;
-  border-radius: 3px;
-  border: none;
-  margin-bottom: 2rem;
+    padding: 15px;
+    font-family: inherit;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 2rem;
 }
+
 .triangle-contact {
-  width: 0;
-  height: 0;
-  border-right: 100vw solid white;
-  border-bottom: 30px solid transparent;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid white;
+    border-bottom: 30px solid transparent;
 }
 
 /* --------------- 4.6 Footer ------------------- */
 footer {
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  background-color: #0C0C0C;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #0C0C0C;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-@media (max-width: 720px) {
-  .projects article {
-    flex-direction: column;
-  }
-  .projects article:nth-child(even) {
-    flex-direction: column;
-  }
-  .projects article div {
-    order: 1;
-  }
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 12px;
+    }
+
+    ul {
+        justify-content: center;
+    }
+
+    .projects article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projects article:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .projects article div {
+        flex-basis: 200px;
+    }
+
+    .projects span {
+        flex-basis: 100%;
+        order: -1;
+    }
+
+    .projects a::after {
+        top: 0.4rem;
+        left: 7.5rem;
+    }
 }
